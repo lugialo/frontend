@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+
+    <style>
+        label,
+        input {
+            display: block;
+        }
+
+        input {
+            margin: 0px 0px 10px;
+        }
+
+        .radio label,
+        .radio input {
+            display: inline-block;
+        }
+
+        .checkbox label,
+        .checkbox input {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="POST">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" value="Zé da Manga" disabled>
+        </div>
+        <div>
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" placeholder="Digite sua cidade...">
+        </div>
+        <div>
+            <label for="cpf">CPF:
+            </label>
+            <input type="text" name="cpf" placeholder="Digite seu CPF...">
+        </div>
+
+        <div>
+            <label for="email">
+                <input type="email" name="email" placeholder="Digite seu e-mail...">
+            </label>
+        </div>
+
+        <div>
+            <label for="idade">
+                Idade
+            </label>
+            <input type="number" name="idade" placeholder="Digite sua idade...">
+        </div>
+
+        <div>
+            label
+        </div>
+
+        <div>
+            <label for="zedamanga">seleciona um arquivo ai dog</label>
+            <input type="file" name="zedamanga" id="">
+        </div>
+
+        <div class="radio">
+            <p>selecione um time</p>
+            <input type="radio" name="radio" id="radio">
+            <label for="radio">varmengo</label>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label for="checkbox">oi!</label>
+        </div>
+
+        <div>
+            <input type="submit">
+        </div>
+
+
+    </form>
+
+</body>
+
+</html>
