@@ -1,0 +1,84 @@
+h3 {
+  color: red;
+}
+
+.card-esquerda {
+  border: 10px solid pink;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  animation: rainbow 5s infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    border-color: red;
+    color: red;
+  }
+  14% {
+    border-color: orange;
+    color: orange;
+  }
+  28% {
+    border-color: yellow;
+    color: yellow;
+  }
+  42% {
+    border-color: lime;
+    color: lime;
+  }
+  57% {
+    border-color: cyan;
+    color: cyan;
+  }
+  71% {
+    border-color: blue;
+    color: blue;
+  }
+  85% {
+    border-color: purple;
+    color: purple;
+  }
+  100% {
+    border-color: red;
+    color: red;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .card-esquerda {
+    display: inline-block;
+  }
+
+  .card-direita {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flex {
+    display: flex;
+  }
+}
+
+.flex-wrap {
+  display: flex;
+}
+
+.container-embalagem {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border: 10px solid red;
+}
+
+.container {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(97, 17, 17);
+  border: 10px solid brown;
+}
+
+.container-lacre {
+  border-right: 10px solid aliceblue;
+}
