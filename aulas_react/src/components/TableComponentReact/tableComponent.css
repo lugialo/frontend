@@ -1,0 +1,40 @@
+body {
+  margin-top: 50px;
+
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  margin-left: 280px;
+  font-size: 20px;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  width: fit-content;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table,
+td,
+th {
+  border: 1px solid lightgray;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding-left: 5px;
+}
+
+thead {
+  color: rgb(250, 246, 246);
+  background-color: #62e48d;
+}
