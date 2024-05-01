@@ -1,6 +1,12 @@
 import "./tableComponent.css";
 
-function TableComponent({ data, formatPrice, formatStock }) {
+function TableComponent({
+  data,
+  formatPrice,
+  formatStock,
+  deleteProduct,
+  editProduct,
+}) {
   return (
     <>
       {" "}
@@ -24,10 +30,18 @@ function TableComponent({ data, formatPrice, formatStock }) {
                 <td>{formatPrice(item.price)}</td>
                 <td>{formatStock(item.stock)}</td>
                 <td>
-                  <button style={{ marginLeft: "25px", marginRight: "50px" }}>
+                  <button
+                    style={{ marginLeft: "25px", marginRight: "50px" }}
+                    onClick={() => editProduct(item.id)}
+                  >
                     Editar
                   </button>
-                  <button style={{ marginRight: "25px" }}>Excluir</button>
+                  <button
+                    style={{ marginRight: "25px" }}
+                    onClick={() => deleteProduct(item.id)}
+                  >
+                    Excluir
+                  </button>
                 </td>
               </tr>
             ))}
