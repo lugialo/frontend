@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import TableComponent from "./components/TableComponent/tableComponent";
 import FormComponent from "./components/FormComponent/formComponent";
@@ -11,6 +11,19 @@ function App() {
   const [price, setPrice] = useState("");
   const [stock, setStock] = useState("");
   const [edit, setEdit] = useState(false);
+
+  const url = "http://localhost:3000/products";
+
+  useEffect(() => {
+    const getProductsList = async () => {
+      const res = await fetch(url);
+
+      const data = await res.json();
+      setProducts(data);
+    };
+
+    getProductsList();
+  }, []);
 
   const clearForm = () => {
     setName("");

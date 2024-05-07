@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "id": 4,
+      "name": "massinha play-doh",
+      "price": 400
+    },
+    {
+      "id": 5,
+      "name": "album de figurinhas do club penguin",
+      "price": 500
+    }
+  ]
+}
