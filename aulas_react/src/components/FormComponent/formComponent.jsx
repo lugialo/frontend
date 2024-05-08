@@ -10,6 +10,7 @@ function FormComponent({
   handleStock,
   saveProduct,
   edit,
+  setEdit,
 }) {
   useEffect(() => {}, [
     edit,
@@ -23,7 +24,7 @@ function FormComponent({
   return (
     <>
       <div className="container">
-        <h2>Formulário de Produtos</h2>
+        <h2>{edit ? "Editar Produto" : "Adicionar Produto"}</h2>
         <form method="post" onSubmit={saveProduct}>
           <label htmlFor="nome">Nome:</label>
           <input
@@ -49,7 +50,20 @@ function FormComponent({
             onChange={handleStock}
             required
           />
-          <input type="submit" value="Salvar" />
+          <div className="submitInputs">
+            <input type="submit" value="Salvar" />
+            {edit ? (
+              <button
+                className="cancelButton"
+                style={{ marginLeft: "10px" }}
+                onClick={() => {
+                  setEdit(false);
+                }}
+              >
+                Cancelar
+              </button>
+            ) : null}
+          </div>
         </form>
       </div>
     </>

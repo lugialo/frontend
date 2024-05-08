@@ -12,6 +12,8 @@ function App() {
   const [stock, setStock] = useState("");
   const [edit, setEdit] = useState(false);
 
+  const lastId = products.length + 1;
+
   const url = "http://localhost:3000/products";
 
   useEffect(() => {
@@ -21,7 +23,6 @@ function App() {
       const data = await res.json();
       setProducts(data);
     };
-
     getProductsList();
   }, []);
 
@@ -37,12 +38,11 @@ function App() {
     const newName = form.elements["nome"].value;
     const newPrice = parseFloat(form.elements["preco"].value);
     const newStock = parseFloat(form.elements["estoque"].value);
-
     if (!edit) {
-      setId((prevId) => prevId + 1);
+      setId(lastId);
       setProducts((prevProducts) => [
         ...prevProducts,
-        { id, name: newName, price: newPrice, stock: newStock },
+        { id: lastId, name: newName, price: newPrice, stock: newStock },
       ]);
     }
 
@@ -53,6 +53,7 @@ function App() {
           : product
       );
       setProducts(updatedProducts);
+      setEdit(false);
     }
     clearForm();
   };
@@ -103,12 +104,14 @@ function App() {
 
       <FormComponent
         saveProduct={saveProduct}
+        edit={edit}
         handleName={handleName}
         handlePrice={handlePrice}
         handleStock={handleStock}
         name={name}
         price={price}
         stock={stock}
+        setEdit={setEdit}
       />
     </>
   );

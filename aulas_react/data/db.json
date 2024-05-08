@@ -1,14 +1,16 @@
 {
   "products": [
     {
-      "id": 4,
+      "id": 1,
       "name": "massinha play-doh",
-      "price": 400
+      "price": 400,
+      "stock": 50.3
     },
     {
-      "id": 5,
+      "id": 2,
       "name": "album de figurinhas do club penguin",
-      "price": 500
+      "price": 500,
+      "stock": 76.5
     }
   ]
 }
